@@ -12,7 +12,7 @@
             <p class="control has-icons-left">
                 <input required name='display_name' class="input {{ $errors->has('display_name') ? ' is-danger' : '' }}" type="" placeholder="Permission Name" value="{{old('display_name')}}">
                 <span class="icon is-small">
-                    @if($errors->has('display_name'))
+                    @if($errors->has('display_name')) 
                     <i class="fa fa-warning" style="color:#ff3860"></i>
                     @else
                     <i class="fa fa-file-text-o"></i>

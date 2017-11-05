@@ -11,6 +11,6 @@ window.Vue = require('vue');
 import Buefy from 'buefy';
 Vue.use(Buefy);
 
-// Vue.component('example', require('./components/Example.vue'));
+Vue.component('slug-widget', require('./components/slugWidget.vue'));
 
 require('./backend');

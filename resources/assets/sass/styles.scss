@@ -1,4 +1,29 @@
-html, body {
-    background-color: whitesmoke;
+#manage-left-nav {
+  position: relative;
+  min-height: 100vh;
+  left: -200px;
+  transition: left 0.2s ease-in-out;
+  &.is-active {
+    transition: left 0.2s ease-in-out;
+    left: 0;
+  }
+  @include desktop {
+    left:0;
+  }
 }
 
+.manage-body {
+  padding: 0px 25px 0px 25px;
+}
+
+#admin-slideout-btn {
+  transition: 0.2s;
+  &.is-active {
+    transition: 0.2s;
+    transform: rotateY(180deg);
+  }
+}
+
+.post-publish-btn {
+  padding: 10px;
+}

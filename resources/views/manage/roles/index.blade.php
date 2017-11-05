@@ -8,7 +8,7 @@
         <span><a class="button is-small" href=" {{route('roles.create')}} ">Add New</a></span>
     </div>
 </div>
-
+ 
 <div class="columns is-multiline">
 
     @foreach($roles as $role)

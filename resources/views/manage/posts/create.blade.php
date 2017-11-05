@@ -21,10 +21,15 @@
 
                     <div class="field">
                       <div class="control">
-                        <textarea rows="17" class="textarea" placeholder="Write your content here..."></textarea>
+                        <slug-widget></slug-widget>
                       </div>
                     </div>
 
+                    <div class="field">
+                      <div class="control">
+                        <textarea rows="17" class="textarea" placeholder="Write your content here..."></textarea>
+                      </div>
+                    </div>
 
                 </div>
             </div>
@@ -60,4 +65,16 @@
 </div>
 </div>
 </form>
+@endsection
+
+@section('scripts')
+<script>
+    new Vue({
+        el: "#manage",
+        data: {
+
+        }
+    });
+
+</script>    
 @endsection

@@ -16,7 +16,7 @@
             <th>Name</th>
             <th>Slug</th>
             <th>Description</th>
-            <th>Craeted Date</th>
+            <th>Craeted Date</th> 
             <th>Actions</th>
         </tr>
     </thead>
