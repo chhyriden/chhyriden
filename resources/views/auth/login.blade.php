@@ -42,6 +42,7 @@
                             </p>
                         </div>
 
+
                         <div class="columns is-mobile m-t-25">
                             <div class="column">
                                 <b-checkbox>Remember Me</b-checkbox>

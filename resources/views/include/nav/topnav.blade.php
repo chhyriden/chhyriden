@@ -2,7 +2,7 @@
     <div class="container">
         <div class="nav-left">
             <a class="nav-item" href="{{route('dashboard')}}">
-                <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma logo">
             </a>
             <a class="nav-item is-hidden-desktop" id="admin-slideout-btn">
                     @if(\Request::is('manage', 'manage/*'))
@@ -27,7 +27,7 @@
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link" href="#">
                     <figure class="image is-24x24" style="margin-right: 8px;">
-                        <img src="http://bulma.io/images/jgthms.png">
+                        <img src="https://bulma.io/images/jgthms.png">
                     </figure> {{Auth()->user()->name}}
                 </a>
             </div>
