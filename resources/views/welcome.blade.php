@@ -78,7 +78,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laraden :)
+                    Laraden
                 </div>
             </div>
         </div>
