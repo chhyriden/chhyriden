@@ -14,7 +14,6 @@
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input required name='name' class="input {{ $errors->has('name') ? ' is-danger' : '' }}" type="" placeholder="Full Name" value="{{old('name')}}">
                                 <span class="icon is-small">
                                 @if($errors->has('name'))
                                     <i class="fa fa-warning" style="color:#ff3860"></i>
@@ -22,13 +21,13 @@
                                 <i class="fa fa-user"></i>
                                 @endif
                                 </span>
+                                <input required name='name' class="input {{ $errors->has('name') ? ' is-danger' : '' }}" type="" placeholder="Full Name" value="{{old('name')}}">
                                 <p class="help is-danger">{{$errors->first('name')}}</p>
                             </p>
                         </div>
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input required name='email' class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="email@address.com" value="{{old('email')}}">
                                 <span class="icon is-small">
                                 @if($errors->has('email'))
                                     <i class="fa fa-warning" style="color:#ff3860"></i>
@@ -36,13 +35,14 @@
                                 <i class="fa fa-envelope"></i>
                                 @endif
                                 </span>
+                                <input required name='email' class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="email@address.com" value="{{old('email')}}">
+
                                 <p class="help is-danger">{{$errors->first('email')}}</p>
                             </p>
                         </div>
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input required name='password' class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="Password">                
                                 <span class="icon is-small">
                                 @if($errors->has('password'))
                                     <i class="fa fa-warning" style="color:#ff3860"></i>
@@ -51,13 +51,14 @@
                                 </span>
                                 @endif
                                 </span>
+                                <input required name='password' class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="Password">                
+
                                 <p class="help is-danger">{{$errors->first('password')}}</p>
                             </p>
                         </div>
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input required name='password_confirmation' class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="Confirm Password">                
                                 <span class="icon is-small">
                                 @if($errors->has('password'))
                                     <i class="fa fa-warning" style="color:#ff3860"></i>
@@ -66,6 +67,8 @@
                                 </span>
                                 @endif
                                 </span>
+                                <input required name='password_confirmation' class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="Confirm Password">                
+
                                 <p class="help is-danger">{{$errors->first('password')}}</p>
                             </p>
                         </div>

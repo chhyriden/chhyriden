@@ -19,7 +19,6 @@
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input required name='email' class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="name@email.com" value="{{old('email')}}">
                                 <span class="icon is-small">
                                 @if($errors->has('email'))
                                     <i class="fa fa-warning" style="color:#ff3860"></i>
@@ -27,6 +26,8 @@
                                 <i class="fa fa-envelope"></i>
                                 @endif
                                 </span>
+                                <input required name='email' class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="name@email.com" value="{{old('email')}}">
+                                
                                 <p class="help is-danger">{{$errors->first('email')}}</p>
                             </p>
                         </div>

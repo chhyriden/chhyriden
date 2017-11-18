@@ -1,7 +1,7 @@
 @extends('layouts.manage')
 
 @section('content')
-<form action="index_submit" method="post" accept-charset="utf-8">
+<form action=" {{route('posts.store')}} " method="post" accept-charset="utf-8">
     {{ csrf_field() }}
     <div class="columns">
         <div class="column">
@@ -15,13 +15,13 @@
                     
                     <div class="field">
                         <div class="control">
-                            <input name="post_title" class="input" type="text" placeholder="Enter title here">
+                            <input name="post_title" class="input" type="text" placeholder="Enter title here" v-model="title">
                         </div>
                     </div>
 
                     <div class="field">
                       <div class="control">
-                        <slug-widget></slug-widget>
+                        <slug-widget url="{{url('/')}}" subdirectory="blog" :title=title @slug-changed="updateSlug"></slug-widget>
                       </div>
                     </div>
 
@@ -72,7 +72,13 @@
     new Vue({
         el: "#manage",
         data: {
-
+            title: '',
+            slug: ''
+        },
+        methods: {
+            updateSlug(val) {
+                this.slug = val;
+            }
         }
     });
 

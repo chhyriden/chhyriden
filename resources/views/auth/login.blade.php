@@ -15,7 +15,6 @@
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input name='email' class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="email@address.com" value=" {{old('email')}}" required autofocus>
                                 <span class="icon is-small">
                                 @if($errors->has('email'))
                                     <i class="fa fa-warning" style="color:#ff3860"></i>
@@ -23,21 +22,22 @@
                                 <i class="fa fa-envelope"></i>
                                 @endif
                                 </span>
+                                <input name='email' class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="yourname@email.com" value=" {{old('email')}}" required autofocus>
                                 <p class="help is-danger">{{$errors->first('email')}}</p>
                             </p>
                         </div>
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input required name='password' class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="************">                
                                 <span class="icon is-small">
-                                @if($errors->has('password'))
-                                    <i class="fa fa-warning" style="color:#ff3860"></i>
-                                @else
-                                <i class="fa fa-lock"></i>
-                                </span>
+                                    @if($errors->has('password'))
+                                        <i class="fa fa-warning" style="color:#ff3860"></i>
+                                    @else
+                                    <i class="fa fa-lock"></i>
                                 @endif
                                 </span>
+
+                                <input required name='password' class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="************">                
                                 <p class="help is-danger">{{$errors->first('password')}}</p>
                             </p>
                         </div>
