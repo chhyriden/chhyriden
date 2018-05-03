@@ -24,7 +24,7 @@ class PermissionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function indexcreate()
     {
         return view('manage.permissions.create');
     }
@@ -122,6 +122,7 @@ class PermissionsController extends Controller
         if ($permission->save()) {
             Session::flash('success', $permission->display_name .' has been updated successfully.');
             return redirect()->route('permissions.show', $permission->id);
+
         }
     }
 

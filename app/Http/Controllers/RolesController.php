@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Role;
 use App\Permission;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class RolesController extends Controller
 {
@@ -51,7 +51,7 @@ class RolesController extends Controller
         $role->name = $request->name;
         $role->description = $request->description;
         $role->save();
-        
+
         if ($request->permissionsSelected && !empty($request->permissionsSelected)) {
             $role->syncPermissions(explode(',', $request->permissionsSelected));
         } else {
@@ -70,7 +70,7 @@ class RolesController extends Controller
      */
     public function show($id)
     {
-        $role = Role::with('permissions')->findOrfail($id);
+        $role = Role::with('permissions')->findOrFail($id);
         return view('manage.roles.show')->withRole($role);
     }
 
@@ -82,7 +82,7 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-        $role = Role::with('permissions')->findOrfail($id);
+        $role = Role::with('permissions')->findOrFail($id);
         $permissions = Permission::all();
         return view('manage.roles.edit')->withRole($role)->withPermissions($permissions);
     }

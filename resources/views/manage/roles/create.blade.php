@@ -83,8 +83,8 @@
     var app = new Vue({
         el: '#manage',
         data: {
-            rolePermissions: [],
-        },
+            rolePermissions: []
+        }
     });
 </script>
 

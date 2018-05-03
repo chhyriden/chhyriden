@@ -17,13 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::prefix('manage')->middleware('role:superadministrator|administrator|author|editor|contributor')->group(function () {
-    Route::get('/', 'ManagesController@redirect');
-    Route::resource('users', 'UsersController');
-    Route::get('dashboard', 'ManagesController@index')->name('manage.dashboard');
-    Route::resource('permissions', 'PermissionsController', ['except' => 'destroy']);
-    Route::resource('roles', 'RolesController', ['except' => 'destroy']);
-    Route::resource('posts', 'PostsController');
-});
+Route::prefix('manage')->middleware('role:superadministrator|administrator|author|editor|contributor')
+    ->group(function () {
+        Route::get('/', 'ManagesController@redirect');
+        Route::resource('users', 'UsersController');
+        Route::get('dashboard', 'ManagesController@index')->name('manage.dashboard');
+        Route::resource('permissions', 'PermissionsController', ['except' => 'destroy']);
+        Route::resource('roles', 'RolesController', ['except' => 'destroy']);
+        Route::resource('posts', 'PostsController');
+        Route::resource('admin', 'AdminsController');
+    });
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
